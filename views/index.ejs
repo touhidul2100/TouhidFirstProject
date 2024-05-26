@@ -1,0 +1,18 @@
+<%-include("layout/header") %>
+    <main>
+        <form action="/" method="post">
+            <input type="text" placeholder="programming Language" name="pLanguage">
+            <button type="submit">Add</button>
+        </form>
+      <%  if(plNames.length>0){ %>
+        <ul>
+           <% for(let x=0;x<plNames.length;x++){ %>
+                <li><%= plNames[x] %></li>
+           <% } %>
+            
+        </ul>
+       <%} else{ %>
+            <p>No programming language added yet</p>
+            <%   } %>
+    </main>
+    <%- include("layout/footer") %>
